@@ -467,11 +467,11 @@ const FertibaseSplash = ({ onComplete, className = "" }) => {
 
   return (
     <motion.div
-      className={`fixed inset-0 flex items-center justify-center bg-amber-50 ${className}`}
+      className={`fixed inset-0 flex items-center justify-center  ${className}`}
       initial={{ opacity: 1 }}
       animate={{ opacity: isFinished ? 0 : 1 }}
       transition={{ duration: SPLASH_FADE_OUT, ease: "easeOut" }}
-      style={{ pointerEvents: isFinished ? "none" : "auto" }}
+      style={{ pointerEvents: isFinished ? "none" : "auto" , backgroundColor: '#f7f7f7' }} // Amber-50
     >
       <div className="relative flex items-center space-x-6 px-6 overflow-hidden">
         {/* === LOGO WITH ANIMATION === */}

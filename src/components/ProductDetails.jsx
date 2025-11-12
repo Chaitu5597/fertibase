@@ -624,11 +624,11 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-green-50 to-emerald-100 min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-green-50 to-emerald-100 min-h-screen py-16 px-4  sm:px-6 lg:px-8">
       {/* Back Link */}
       <Link
         to="/products"
-        className="inline-block text-emerald-700 font-semibold mb-12 ml-4 hover:text-emerald-900 transition-colors"
+        className="inline-block text-emerald-700 font-semibold mb-24 ml-14 hover:text-emerald-900 transition-colors"
       >
         ← Back to Products
       </Link>

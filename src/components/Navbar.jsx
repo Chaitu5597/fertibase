@@ -412,7 +412,7 @@
 
 // // Replace with your actual logo path
 // import  logoGreen from "../assets/logo.png";   // For transparent navbar
-// import  logoWhite from "../assets/scroll.png";     // For scrolled navbar
+// import  logoWhite from "../assets/imagee.jpg";     // For scrolled navbar
 
 // export default function Navbar() {
 //   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -467,7 +467,7 @@
 //       transition={{ duration: 0.6 }}
 //       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
 //         scrolled
-//           ? "backdrop-blur-md bg-white/70 shadow-md"
+//           ? "backdrop-blur-md bg-white shadow-md"
 //           : "bg-transparent"
 //       }`}
 //     >
@@ -501,7 +501,7 @@
 //                   whileHover={{ scale: 1.05 }}
 //                   className={`relative font-medium transition-colors ${
 //                     scrolled
-//                       ? "text-gray-800 hover:text-green-700"
+//                       ? "text-white hover:text-green-700"
 //                       : "text-white hover:text-green-300"
 //                   }`}
 //                 >
@@ -547,72 +547,65 @@
 
 
 
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.jpg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Scroll detection
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const location = useLocation();
 
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/aboutus" },
     { name: "Products", path: "/products" },
     { name: "Benefits", path: "/benefits" },
-    { name: "Contact", path: "/Contactus" },
-    { name: "Our Services", path: "/Services" },
+    { name: "Contact", path: "/contactus" },
+    { name: "Our Services", path: "/services" },
   ];
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 md:px-8">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+    <nav className="fixed top-0 left-0 w-full z-50  shadow-md transition-all duration-300" style={{backgroundColor:"#f7f7f7"}}>
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 pl-0  md:pr-1">
+        
+        {/* === FULL LOGO IMAGE === */}
+        <Link to="/" onClick={closeMenu} className="flex items-center">
           <img
-            src="/fertibase-logo.png"
+            src={logo}
             alt="FertiBase Logo"
-            className="w-9 h-9 object-contain"
+            className="h-12 w-auto object-contain md:h-24"
           />
-          <span className="text-2xl font-bold text-green-700">FertiBase</span>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
+        {/* === DESKTOP MENU === */}
+        <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium text-md">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className="hover:text-green-600 transition-colors"
+              className={`hover:text-green-600 transition-colors ${
+                location.pathname === link.path ? "text-green-700 font-semibold" : ""
+              }`}
             >
               {link.name}
             </Link>
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* === MOBILE TOGGLE === */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-gray-800"
+          className="md:hidden text-gray-800 focus:outline-none"
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* === MOBILE MENU === */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="flex flex-col space-y-3 px-4 py-4">
@@ -620,8 +613,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                onClick={() => setIsOpen(false)}
-                className="text-gray-700 hover:text-green-600 transition-colors"
+                onClick={closeMenu}
+                className={`text-gray-700 hover:text-green-600 transition-colors text-left ${
+                  location.pathname === link.path ? "text-green-700 font-semibold" : ""
+                }`}
               >
                 {link.name}
               </Link>
@@ -632,3 +627,97 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
+
+
+
+
+
+// import { useState, useEffect } from "react";
+// import { Menu, X } from "lucide-react";
+// import { Link } from "react-router-dom";
+
+// export default function Navbar() {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [scrolled, setScrolled] = useState(false);
+
+//   // Scroll detection
+//   useEffect(() => {
+//     const onScroll = () => setScrolled(window.scrollY > 30);
+//     window.addEventListener("scroll", onScroll);
+//     return () => window.removeEventListener("scroll", onScroll);
+//   }, []);
+
+//   const navLinks = [
+//     { name: "Home", path: "/" },
+//     { name: "About", path: "/aboutus" },
+//     { name: "Products", path: "/products" },
+//     { name: "Benefits", path: "/benefits" },
+//     { name: "Contact", path: "/Contactus" },
+//     { name: "Our Services", path: "/Services" },
+//   ];
+
+//   return (
+//     <nav
+//       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+//         scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+//       }`}
+//     >
+//       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 md:px-8">
+//         {/* Logo */}
+//         <Link to="/" className="flex items-center gap-2">
+//           <img
+//             src="/fertibase-logo.png"
+//             alt="FertiBase Logo"
+//             className="w-9 h-9 object-contain"
+//           />
+//           <span className="text-2xl font-bold text-green-700">FertiBase</span>
+//         </Link>
+
+//         {/* Desktop Menu */}
+//         <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
+//           {navLinks.map((link) => (
+//             <Link
+//               key={link.name}
+//               to={link.path}
+//               className="hover:text-green-600 transition-colors"
+//             >
+//               {link.name}
+//             </Link>
+//           ))}
+//         </div>
+
+//         {/* Mobile Menu Button */}
+//         <button
+//           onClick={() => setIsOpen(!isOpen)}
+//           className="md:hidden text-gray-800"
+//           aria-label="Toggle Menu"
+//         >
+//           {isOpen ? <X size={24} /> : <Menu size={24} />}
+//         </button>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {isOpen && (
+//         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+//           <div className="flex flex-col space-y-3 px-4 py-4">
+//             {navLinks.map((link) => (
+//               <Link
+//                 key={link.name}
+//                 to={link.path}
+//                 onClick={() => setIsOpen(false)}
+//                 className="text-gray-700 hover:text-green-600 transition-colors"
+//               >
+//                 {link.name}
+//               </Link>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// }
+
+
+

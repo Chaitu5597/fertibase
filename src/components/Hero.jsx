@@ -129,6 +129,10 @@
 
 import { ChevronRight, Leaf, Sprout } from "lucide-react";
 import { motion } from "framer-motion";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import About from "../components/About";
+
 
 export default function Hero() {
   return (
@@ -136,6 +140,7 @@ export default function Hero() {
       id="home"
       className="relative bg-gradient-to-br from-green-100 via-white to-green-50 overflow-hidden"
     >
+      
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -222,6 +227,12 @@ export default function Hero() {
             fill="currentColor"
           ></path>
         </svg>
+      </div>
+   
+      <div>
+        <About />
+        <Contact />
+      
       </div>
     </section>
   );

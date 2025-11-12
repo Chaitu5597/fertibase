@@ -908,7 +908,7 @@ export default function ProductsPage() {
         <div className="mb-6">
           <button
             onClick={() => navigate(-1)}
-            className="text-emerald-700 font-semibold my-16 ml-2 hover:text-emerald-900 mb-4"
+            className="inline-block text-emerald-700 font-semibold mb-12  hover:text-emerald-900 transition-colors"
           >
             ← Back to Products
           </button>
