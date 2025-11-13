@@ -1,5 +1,33 @@
 // products.js   (plain .js file – no .mjs needed)
 import nitrobaseImage from '../src/assets/nitrbase.png';
+import Beni_Base_4kg from '../src/assets/Beni_Base_4kg.png';
+import Camags from '../src/assets/Camags.png';
+import cancore from '../src/assets/cancore.png';
+import carbo_min from '../src/assets/carbo_min.png';
+import carbomin1 from '../src/assets/CARBOMIN - I(INITIAL).png';
+import cas from '../src/assets/cas.png';
+import CARBOMINBOOSTER from '../src/assets/CARBOMINBOOSTER.png';
+import CARBOMINFA from '../src/assets/CARBOMINFA.png';
+import CARBOMINSPECIAL from '../src/assets/CARBOMINSPECIAL.png';
+import CopiousNp from '../src/assets/Copious-Np.png';
+import CopiousNPK from '../src/assets/CopiousNPK.png';
+import fertibg from '../src/assets/fertibg.png';
+import fertica6 from '../src/assets/fertica6.png';
+import fertica21 from '../src/assets/fertica21.png';
+import ferti_eleven from '../src/assets/ferti_eleven.png';
+import ferti_seven from '../src/assets/ferti_seven.png';
+import carbocen from '../src/assets/corbcen.png';
+import ZINBASE from '../src/assets/ZINBASE.png';
+import t8 from '../src/assets/t8.png';
+import promore from '../src/assets/promore.png';
+import CopiousK from '../src/assets/CopiousK.png';
+import HYDROMINLEVEL3 from '../src/assets/HYDROMINLEVEL3.png';
+import bloom from '../src/assets/bloom.png';
+import phospobase from '../src/assets/phospobase.png';
+import mycore from '../src/assets/mycore.png';
+import photobase from '../src/assets/photobase.png';
+import zincore from '../src/assets/zincore.png';
+import microlife from '../src/assets/microlife.png';
 
 
 export const products = [
@@ -58,7 +86,7 @@ export const products = [
   {
     id: "4",
     name: "BLOOM",
-    image: "/images/bloom.jpg",
+    image: bloom,
     desc: "Liquid biofertilizer (min. 1x10⁸ CFU/ml) with free-living and endophytic nitrogen-fixing bacteria.",
     category: "Nitrogen-Fixing Biofertilizers",
     details: "Converts atmospheric nitrogen (N2) into plant-usable forms, promoting healthy crop growth.",
@@ -77,7 +105,7 @@ export const products = [
   {
     id: "5",
     name: "PHOSPHOBASE",
-    image: "/images/phosphobase.jpg",
+    image: phospobase,
     desc: "Liquid biofertilizer (min. 1x10⁹ CFU/ml) with phosphorus solubilizing bacteria.",
     category: "Phosphorus-Fixing / Solubilizing Biofertilizers",
     details: "Unlocks soil phosphorus, boosts plant growth, and improves crop yield.",
@@ -94,7 +122,7 @@ export const products = [
   {
     id: "6",
     name: "PROMORE",
-    image: "/images/promore.jpg",
+    image: promore,
     desc: "Organic bio-fertilizer enriched with readily available phosphorus.",
     category: "Phosphorus-Fixing / Solubilizing Biofertilizers",
     details: "Substitute for DAP/SSP, increases phosphorus uptake and soil fertility.",
@@ -113,7 +141,7 @@ export const products = [
   {
     id: "7",
     name: "MYCORE",
-    image: "/images/mycore.jpg",
+    image: mycore,
     desc: "Biofertilizer with Vesicular Arbuscular Mycorrhiza (VAM) spores in granular/liquid form.",
     category: "Fungi-Based / Mycorrhizal Biofertilizers",
     details: "Enhances phosphorus uptake, strengthens roots, improves nutrient absorption and plant health.",
@@ -128,8 +156,8 @@ export const products = [
   },
   {
     id: "8",
-    name: "MVCROLIFE",
-    image: "/images/mvcrolife.jpg",
+    name: "MyCROLIFE",
+    image: microlife,
     desc: "Revolutionary biofertilizer with fungi in solid granules or liquid form.",
     category: "Fungi-Based / Mycorrhizal Biofertilizers",
     details: "Boosts phosphorus uptake in low-P soils, increases mycorrhizal fungi for long-term absorption.",
@@ -147,7 +175,7 @@ export const products = [
   {
     id: "9",
     name: "POTABASE",
-    image: "/images/potabase.jpg",
+    image: photobase,
     desc: "Liquid biofertilizer (min. 1x10⁸ CFU/ml) with Potassium Mobilizing Bacteria.",
     category: "Potassium-Fixing / Solubilizing Biofertilizers",
     details: "Solubilizes complex potassium, making it available to plants for healthier growth and better yields.",
@@ -163,7 +191,7 @@ export const products = [
   {
     id: "10",
     name: "COPIOUS-K",
-    image: "/images/copious-k.jpg",
+    image: CopiousK,
     desc: "High-potency biofertilizer (min. 5x10⁷ CFU/g) with Potassium Mobilizing Bacteria.",
     category: "Potassium-Fixing / Solubilizing Biofertilizers",
     details: "Boosts soil potassium availability and crop productivity.",
@@ -181,7 +209,7 @@ export const products = [
   {
     id: "11",
     name: "ZIN BASE - ZINBASE",
-    image: "/images/zinbase.jpg",
+    image: ZINBASE,
     desc: "Liquid biofertilizer (min. 1x10⁸ CFU/ml) with zinc-solubilizing bacteria.",
     category: "Zinc / Micronutrient Biofertilizers",
     details: "Unlocks soil-bound zinc, supporting healthy crop growth and yield.",
@@ -197,7 +225,7 @@ export const products = [
   {
     id: "12",
     name: "ZINCORE",
-    image: "/images/zincore.jpg",
+    image: zincore,
     desc: "Chelated Zinc as Zinc Glycine Liquid (Zn 6.8%) for enhanced zinc availability.",
     category: "Zinc / Micronutrient Biofertilizers",
     details: "Ensures rapid absorption and better nutrient utilization.",
@@ -215,7 +243,7 @@ export const products = [
   {
     id: "13",
     name: "FERTI-BG",
-    image: "/images/ferti-bg.jpg",
+    image: fertibg,
     desc: "Chelated Boron as Boron Glycine Liquid (B 5%) for improved pollination and fruit set.",
     category: "Zinc / Micronutrient Biofertilizers",
     details: "Enhances boron solubility and bioavailability.",
@@ -235,7 +263,7 @@ export const products = [
   {
     id: "14",
     name: "COPIOUS-NPK",
-    image: "/images/copious-npk.jpg",
+    image: CopiousNPK,
     desc: "Consortium biofertilizer (min. 3x10⁷ CFU/g) with N, P, K bacteria.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Enhances nutrient availability and crop health.",
@@ -251,7 +279,7 @@ export const products = [
   {
     id: "15",
     name: "COPIOUS-NP",
-    image: "/images/copious-np.jpg",
+    image: CopiousNp,
     desc: "Granular biofertilizer (min. 3x10⁷ CFU/g) delivering nitrogen and phosphorus.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Promotes nitrogen fixation and phosphorus availability.",
@@ -267,7 +295,7 @@ export const products = [
   {
     id: "16",
     name: "BENIBASE",
-    image: "/images/benibase.jpg",
+    image: Beni_Base_4kg,
     desc: "Granular biofertilizer (min. 3x10⁷ CFU/g) with N, P, K bacteria.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Provides essential nutrients in granular form for sustainable growth.",
@@ -303,7 +331,7 @@ export const products = [
   {
     id: "18",
     name: "CAMAGS",
-    image: "/images/camags.jpg",
+    image: Camags,
     desc: "Premium bio-enriched organic manure from plant-based materials via microbial composting.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Provides organic matter, humus, microbes, and NPK.",
@@ -354,7 +382,7 @@ export const products = [
   {
     id: "21",
     name: "HVDROMIN L-3 (Maturity)",
-    image: "/images/hvdromin-l3.jpg",
+    image: HYDROMINLEVEL3,
     desc: "Liquid fermented manure for fruit ripening and quality.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Supplies K and micronutrients for better color, size, and shelf life.",
@@ -371,7 +399,7 @@ export const products = [
   {
     id: "22",
     name: "CARBOMIN-I (Initial)",
-    image: "/images/carbomin-i.jpg",
+    image: carbomin1,
     desc: "Liquid fermented organic manure for early vegetative growth.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Promotes root development and chlorophyll production.",
@@ -388,7 +416,7 @@ export const products = [
   {
     id: "23",
     name: "CARBOMIN-B (Booster)",
-    image: "/images/carbomin-b.jpg",
+    image: CARBOMINBOOSTER,
     desc: "Liquid fermented manure for flowering stage.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Provides P and K for healthy flower development.",
@@ -405,7 +433,7 @@ export const products = [
   {
     id: "24",
     name: "CARBOMIN-S (Special)",
-    image: "/images/carbomin-s.jpg",
+    image: CARBOMINSPECIAL,
     desc: "Liquid fermented manure for fruit maturity and ripening.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Supplies K and micronutrients for uniform fruit growth.",
@@ -422,7 +450,7 @@ export const products = [
   {
     id: "25",
     name: "CARBOMIN-FA",
-    image: "/images/carbomin-fa.jpg",
+    image: CARBOMINFA,
     desc: "Foliar-grade liquid fermented organic manure.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Quick nutrient boost during critical growth stages.",
@@ -439,7 +467,7 @@ export const products = [
   {
     id: "26",
     name: "CARBOCEN",
-    image: "/images/carbocen.jpg",
+    image: carbocen,
     desc: "High-quality liquid organic manure with fermented organic matter and microbes.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Enriches soil structure and microbial activity.",
@@ -458,7 +486,7 @@ export const products = [
   {
     id: "27",
     name: "FERTI Ca-21%",
-    image: "/images/ferti-ca21.jpg",
+    image: fertica21,
     desc: "Fortified Calcium Suspension (Ca-21%) for cell wall strength and fruit quality.",
     category: "Zinc / Micronutrient Biofertilizers",
     details: "Provides readily available calcium for physiological processes.",
@@ -475,7 +503,7 @@ export const products = [
   {
     id: "28",
     name: "FERTI-Ca-6%",
-    image: "/images/ferti-ca6.jpg",
+    image: fertica6,
     desc: "Chelated Calcium as Calcium Glycine Liquid (Ca 6%).",
     category: "Zinc / Micronutrient Biofertilizers",
     details: "Enhances calcium solubility and uptake.",
@@ -510,7 +538,7 @@ export const products = [
   {
     id: "30",
     name: "FERTI (11:11:8)",
-    image: "/images/ferti-11118.jpg",
+    image: ferti_eleven,
     desc: "Balanced NPK (11:11:8) fortified with Zn & Boron.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Meets nutritional needs during critical growth stages.",
@@ -527,7 +555,7 @@ export const products = [
   {
     id: "31",
     name: "FERTI CANCORE",
-    image: "/images/ferti-cancore.jpg",
+    image: cancore,
     desc: "Calcium Nitrate + Magnesium Suspension.",
     category: "Zinc / Micronutrient Biofertilizers",
     details: "Promotes robust growth and reduces blossom end rot.",
@@ -545,7 +573,7 @@ export const products = [
   {
     id: "32",
     name: "FERTI (7:21:0)",
-    image: "/images/ferti-7210.jpg",
+    image: ferti_seven,
     desc: "High Phosphorus (21% P₂O₅) with 7% N and 0.2% Zn.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Addresses phosphorus deficiency and enhances root/flowering.",
@@ -562,7 +590,7 @@ export const products = [
   {
     id: "33",
     name: "FERTI 8:8:8",
-    image: "/images/ferti-888.jpg",
+    image: t8,
     desc: "Balanced NPK (8:8:8) liquid fertilizer for sugarcane.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Supports growth and development of sugarcane.",
@@ -578,7 +606,7 @@ export const products = [
   {
     id: "34",
     name: "FERTI CAS",
-    image: "/images/ferti-cas.jpg",
+    image: cas,
     desc: "Calcium Thiosulphate (CaS₂O₃) Liquid Fertilizer.",
     category: "Zinc / Micronutrient Biofertilizers",
     details: "Chloride-free dual nutrient (Ca + S) source.",
