@@ -4,10 +4,9 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-      // GitHub Pages SPA redirect fix for Vite + React Router
-      const path = window.location.pathname;
-      // 👇 include your repo name here (fertibase)
-      const redirectUrl = window.location.origin + "/fertibase/#" + path;
+      const repo = "fertibase";
+      const path = window.location.pathname.replace(`/${repo}`, "");
+      const redirectUrl = window.location.origin + `/${repo}/#` + path;
       window.location.replace(redirectUrl);
     </script>
   </head>
