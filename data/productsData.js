@@ -19,13 +19,13 @@ import ferti_seven from '../src/assets/ferti_seven.png';
 import carbocen from '../src/assets/corbcen.png';
 import ZINBASE from '../src/assets/ZINBASE.png';
 import t8 from '../src/assets/t8.png';
-import promore from '../src/assets/promore.png';
+import promore from '../src/assets/Promore.png';
 import CopiousK from '../src/assets/CopiousK.png';
 import HYDROMINLEVEL3 from '../src/assets/HYDROMINLEVEL3.png';
 import bloom from '../src/assets/bloom.png';
 import phospobase from '../src/assets/phospobase.png';
 import mycore from '../src/assets/mycore.png';
-import photobase from '../src/assets/photobase.png';
+import photobase from '../src/assets/photobase.png'; 
 import zincore from '../src/assets/zincore.png';
 import microlife from '../src/assets/microlife.png';    
 
