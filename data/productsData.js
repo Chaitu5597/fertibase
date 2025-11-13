@@ -27,7 +27,7 @@ import phospobase from '../src/assets/phospobase.png';
 import mycore from '../src/assets/mycore.png';
 import photobase from '../src/assets/photobase.png';
 import zincore from '../src/assets/zincore.png';
-import microlife from '../src/assets/microlife.png';
+import microlife from '../src/assets/microlife.png';    
 
 
 export const products = [
