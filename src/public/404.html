@@ -2,6 +2,12 @@
 <html>
   <head>
     <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // GitHub Pages SPA redirect fix for React Router / Vite
+      const path = window.location.pathname;
+      const redirectUrl = window.location.origin + "/#" + path;
+      window.location.replace(redirectUrl);
+    </script>
   </head>
   <body></body>
 </html>
