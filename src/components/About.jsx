@@ -105,7 +105,7 @@ export default function About() {
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
             Why Choose{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-lime-500">
-              Ferti?
+              Fertile base 
             </span>
           </h2>
 

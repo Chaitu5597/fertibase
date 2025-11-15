@@ -860,6 +860,176 @@
 
 
 
+// import { ChevronRight } from "lucide-react";
+// import { useNavigate } from "react-router-dom";
+// import { motion } from "framer-motion";
+// import { useState } from "react";
+// import { products } from "./../../data/productsData";
+
+// export default function ProductsPage() {
+//   const navigate = useNavigate();
+
+//   const categories = [
+//     "All",
+//     ...Array.from(new Set(products.map((p) => p.category || "Uncategorized"))),
+//   ];
+
+//   const [activeCategory, setActiveCategory] = useState("All");
+
+//   const filteredProducts =
+//     activeCategory === "All"
+//       ? products
+//       : products.filter(
+//           (p) => (p.category || "Uncategorized") === activeCategory
+//         );
+
+//   return (
+//     <section className="py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-lime-100 min-h-screen relative overflow-hidden">
+//       {/* Floating Glow Blobs */}
+//       <motion.div
+//         className="absolute -top-32 -left-32 w-96 h-96 bg-emerald-200/40 rounded-full blur-3xl"
+//         animate={{
+//           x: [0, 30, 0],
+//           y: [0, 50, 0],
+//         }}
+//         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+//       />
+//       <motion.div
+//         className="absolute bottom-0 right-0 w-96 h-96 bg-lime-300/30 rounded-full blur-3xl"
+//         animate={{
+//           x: [0, -40, 0],
+//           y: [0, -60, 0],
+//         }}
+//         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+//       />
+
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+//         {/* Back Button */}
+//         <div className="mb-6">
+//           <button
+//             onClick={() => navigate(-1)}
+//             className="inline-block text-emerald-700 font-semibold mb-8  hover:text-emerald-900 transition-colors"
+//           >
+//             ← Back to Products
+//           </button>
+//         </div> 
+
+//         <h2 className="text-5xl font-extrabold text-center text-emerald-800 mb-12 drop-shadow-sm">
+//           Our Products
+//         </h2>
+
+//         {/* Category Tabs */}
+//         <div className="flex flex-wrap justify-center mb-12 gap-3">
+//           {categories.map((cat) => (
+//             <motion.button
+//               key={cat}
+//               onClick={() => setActiveCategory(cat)}
+//               whileTap={{ scale: 0.9 }}
+//               className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 backdrop-blur-md ${
+//                 activeCategory === cat
+//                   ? "bg-gradient-to-r from-emerald-600 to-green-500 text-white shadow-lg shadow-emerald-300/30 scale-105"
+//                   : "bg-white/80 text-gray-700 border border-gray-300 hover:bg-emerald-50"
+//               }`}
+//             >
+//               {cat}
+//             </motion.button>
+//           ))}
+//         </div>
+
+//         {/* Product Cards */}
+//         {filteredProducts.length === 0 ? (
+//           <p className="text-center text-gray-500">No products available.</p>
+//         ) : (
+//           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+//             {filteredProducts.map((product, i) => (
+//               <motion.div
+//                 key={product.id}
+//                 initial={{ opacity: 0, y: 40 }}
+//                 animate={{ opacity: 1, y: 0 }}
+//                 transition={{ delay: i * 0.1, duration: 0.5 }}
+//                 whileHover={{ scale: 1.04 }}
+//                 onClick={() => navigate(`/products/${product.id}`)}
+//                 className="group relative bg-gradient-to-br from-white via-white-50 to-green-50 rounded-3xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500 border border-emerald-100"
+//               >
+//                 {/* Image Section */}
+//                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-lime-700 via-green-100 to-lime-500 flex items-center justify-center rounded-3xl group">
+//                   {/* Soft Glow */}
+//                   {/* <motion.div
+//                     className="absolute w-72 h-72 rounded-full bg-gradient-to-r from-green-200/30 via-lime-100/20 to-transparent blur-3xl"
+//                     animate={{ rotate: 360 }}
+//                     transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+//                   /> */}
+//                   <motion.div
+//   className="absolute w-72 h-72  bg-green-100/40 "
+//   animate={{ rotate: 360 }}
+//   transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+// />
+
+
+//                   {/* Product Image */}
+//                   <motion.img
+//                     src={product.image || "/images/placeholder.jpg"}
+//                     alt={product.name}
+//                     className="object-contain h-full w-full z-10"
+//                     initial={{ scale: 1 }}
+//                     whileHover={{
+//                       scale: 1.1,
+//                       rotateY: 5,
+//                       rotateX: 2,
+//                       transition: { duration: 0.6, ease: "easeInOut" },
+//                     }}
+//                   />
+
+//                   {/* Light Shine */}
+//                   <motion.div
+//                     className="absolute inset-0  opacity-0 group-hover:opacity-100"
+//                     initial={{ x: "-100%" }}
+//                     whileHover={{
+//                       x: ["-100%", "100%"],
+//                       transition: { duration: 1.5, ease: "easeInOut" },
+//                     }}
+//                     style={{ mixBlendMode: "soft-light" }}
+//                   />
+//                 </div>
+
+//                 {/* Content Section */}
+//                 <div className="p-6 text-left">
+//                   {product.badge && (
+//                     <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">
+//                       {product.badge}
+//                     </span>
+//                   )}
+//                   <h3 className="text-2xl font-bold text-emerald-800 mt-3 group-hover:text-green-900 transition-colors">
+//                     {product.name}
+//                   </h3>
+
+//                   {/* {product.desc && (
+//                     <p className="text-gray-600 mt-2 line-clamp-3">
+//                       {product.desc}
+//                     </p>
+//                   )} */}
+
+//                   <div className="mt-5 flex items-right justify-center text-emerald-700 font-semibold group-hover:text-green-900 transition-colors">
+//                     View More <ChevronRight className="ml-1 h-5 w-5" />
+//                   </div>
+//                 </div>
+
+//                 {/* Border Glow */}
+//                 <motion.div
+//                   className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-emerald-300/60"
+//                   transition={{ duration: 0.3 }}
+//                 />
+//               </motion.div>
+//             ))}
+//           </div>
+//         )}
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
 import { ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -908,7 +1078,7 @@ export default function ProductsPage() {
         <div className="mb-6">
           <button
             onClick={() => navigate(-1)}
-            className="inline-block text-emerald-700 font-semibold mb-12  hover:text-emerald-900 transition-colors"
+            className="inline-block text-emerald-700 font-semibold mb-8 hover:text-emerald-900 transition-colors"
           >
             ← Back to Products
           </button>
@@ -940,80 +1110,57 @@ export default function ProductsPage() {
         {filteredProducts.length === 0 ? (
           <p className="text-center text-gray-500">No products available.</p>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
             {filteredProducts.map((product, i) => (
               <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.04 }}
-                onClick={() => navigate(`/products/${product.id}`)}
-                className="group relative bg-gradient-to-br from-white via-white-50 to-green-50 rounded-3xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500 border border-emerald-100"
-              >
-                {/* Image Section */}
-                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-lime-700 via-green-100 to-lime-500 flex items-center justify-center rounded-3xl group">
-                  {/* Soft Glow */}
-                  <motion.div
-                    className="absolute w-72 h-72 rounded-full bg-gradient-to-r from-green-200/30 via-lime-100/20 to-transparent blur-3xl"
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-                  />
+  key={product.id}
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: i * 0.1, duration: 0.5 }}
+  whileHover={{ scale: 1.03 }}   // smoother and clean
+  onClick={() => navigate(`/products/${product.id}`)}
+  className="group relative bg-white rounded-3xl shadow-lg overflow-hidden cursor-pointer transition-all duration-500 border border-green-200/60 hover:border-green-400/70 hover:shadow-emerald-200/40 hover:shadow-[0px_0px_25px]"
+>
+  {/* Inner Shine */}
+  <div className="absolute inset-0 rounded-3xl pointer-events-none bg-gradient-to-br from-white/20 via-transparent to-emerald-100/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
-                  {/* Product Image */}
-                  <motion.img
-                    src={product.image || "/images/placeholder.jpg"}
-                    alt={product.name}
-                    className="object-contain h-full w-full z-10"
-                    initial={{ scale: 1 }}
-                    whileHover={{
-                      scale: 1.1,
-                      rotateY: 5,
-                      rotateX: 2,
-                      transition: { duration: 0.6, ease: "easeInOut" },
-                    }}
-                  />
+  {/* Image Section */}
+  <div className="relative h-52 bg-green-100 flex items-center justify-center rounded-3xl overflow-hidden">
+    <motion.img
+      src={product.image || "/images/placeholder.jpg"}
+      alt={product.name}
+      className="object-contain h-40 w-40 z-10"   // smaller + fixed size
+      initial={{ scale: 0.95 }}
+      whileHover={{
+        scale: 1.05,   // small subtle zoom
+        transition: { duration: 0.4, ease: "easeInOut" },
+      }}
+    />
+  </div>
 
-                  {/* Light Shine */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100"
-                    initial={{ x: "-100%" }}
-                    whileHover={{
-                      x: ["-100%", "100%"],
-                      transition: { duration: 1.5, ease: "easeInOut" },
-                    }}
-                    style={{ mixBlendMode: "soft-light" }}
-                  />
-                </div>
+  {/* Content Section */}
+  <div className="p-6 text-left">
+    {product.badge && (
+      <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">
+        {product.badge}
+      </span>
+    )}
 
-                {/* Content Section */}
-                <div className="p-6 text-left">
-                  {product.badge && (
-                    <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">
-                      {product.badge}
-                    </span>
-                  )}
-                  <h3 className="text-2xl font-bold text-emerald-800 mt-3 group-hover:text-green-900 transition-colors">
-                    {product.name}
-                  </h3>
+    <h3 className="text-lg font-bold text-emerald-800 mt-3 group-hover:text-green-900 transition-colors">
+      {product.name}
+    </h3>
 
-                  {product.desc && (
-                    <p className="text-gray-600 mt-2 line-clamp-3">
-                      {product.desc}
-                    </p>
-                  )}
+    <div className="mt-5 flex items-center justify-end text-emerald-700 font-semibold group-hover:text-green-900 transition-colors">
+      View More <ChevronRight className="ml-1 h-5 w-5" />
+    </div>
+  </div>
 
-                  <div className="mt-5 flex items-center justify-center text-emerald-700 font-semibold group-hover:text-green-900 transition-colors">
-                    View More <ChevronRight className="ml-1 h-5 w-5" />
-                  </div>
-                </div>
+  {/* Premium Border Glow */}
+  <motion.div
+    className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-emerald-300 transition-all duration-500"
+  />
+</motion.div>
 
-                {/* Border Glow */}
-                <motion.div
-                  className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-emerald-300/60"
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.div>
             ))}
           </div>
         )}
