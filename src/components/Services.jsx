@@ -44,7 +44,9 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-bold text-emerald-700 mb-6"
         >
-          Our Services
+          <h1 className="text-5xl md:text-6xl font-extrabold text-emerald-700">
+          Our <span className="text-green-500">Services</span>
+        </h1>
         </motion.h1>
 
         <motion.p

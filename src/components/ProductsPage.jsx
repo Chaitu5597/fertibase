@@ -1084,8 +1084,12 @@ export default function ProductsPage() {
           </button>
         </div>
 
-        <h2 className="text-5xl font-extrabold text-center text-emerald-800 mb-12 drop-shadow-sm">
+        {/* <h2 className="text-5xl font-extrabold text-center text-emerald-800 mb-12 drop-shadow-sm">
           Our Products
+        </h2> */}
+{/* Innovations by FertiBase */}
+        <h2 className="text-5xl md:text-6xl font-extrabold text-emerald-700 text-center mb-12">
+          Innovations <span className="text-green-500">By FertiBase</span>
         </h2>
 
         {/* Category Tabs */}
@@ -1168,3 +1172,6 @@ export default function ProductsPage() {
     </section>
   );
 }
+
+
+

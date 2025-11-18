@@ -243,7 +243,14 @@ export default function CareerPage() {
           <ArrowLeft size={22} /> Go Back
         </button>
 
-        <h1 className="text-4xl font-extrabold text-emerald-800 text-center mb-8">Join With Us</h1>
+        {/* <h1 className="text-4xl font-extrabold text-emerald-800 text-center mb-8">Join With Us</h1> */}
+        <h1 className="text-xl md:text-6xl font-extrabold text-emerald-700 text-center mb-6">
+  Growing the Future of <span className="text-green-500">FertiBase</span>
+</h1>
+<p className="text-md md:text-lg text-gray-700 max-w-3xl mx-auto mb-9 text-center">
+  Innovative solutions for sustainable and smarter farming — empowering growth, naturally.
+</p>
+
 
         <div className="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-10">
           <input
@@ -309,42 +316,42 @@ export default function CareerPage() {
                         //     </div>
                         //   </motion.div>
                         // </div>
-       <div key={card.id} className="px-3">
-  <motion.div
-    whileHover={{ scale: 1.03 }}
-    transition={{ type: "spring", stiffness: 220, damping: 18 }}
-    className="
+                        <div key={card.id} className="px-3">
+                          <motion.div
+                            whileHover={{ scale: 1.03 }}
+                            transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                            className="
       bg-white/70 backdrop-blur-xl border border-white/40 shadow-xl 
       rounded-3xl cursor-pointer p-6 h-[380px] flex flex-col justify-between m-3
     "
-  >
-    <div>
-      <h3 className="text-2xl font-bold text-emerald-900 tracking-tight line-clamp-1">
-        {card.title}
-      </h3>
+                          >
+                            <div>
+                              <h3 className="text-2xl font-bold text-emerald-900 tracking-tight line-clamp-1">
+                                {card.title}
+                              </h3>
 
-      <p className="text-gray-700 mt-3 text-base line-clamp-4 leading-relaxed">
-        {card.preview}
-      </p>
-    </div>
+                              <p className="text-gray-700 mt-3 text-base line-clamp-4 leading-relaxed">
+                                {card.preview}
+                              </p>
+                            </div>
 
-    <div>
-      <div className="text-sm text-emerald-800 font-semibold ">
-        {card.positions} positions • {card.daysLeft} days left
-      </div>
+                            <div>
+                              <div className="text-sm text-emerald-800 font-semibold ">
+                                {card.positions} positions • {card.daysLeft} days left
+                              </div>
 
-      <button
-        onClick={() => navigate(`/career/${card.id}`, { state: card })}
-        className="
+                              <button
+                                onClick={() => navigate(`/career/${card.id}`, { state: card })}
+                                className="
           mt-5 w-full py-2.5 rounded-xl font-medium text-emerald-900
           bg-emerald-100 hover:bg-emerald-200 transition
         "
-      >
-        See Details →
-      </button>
-    </div>
-  </motion.div>
-</div>
+                              >
+                                See Details →
+                              </button>
+                            </div>
+                          </motion.div>
+                        </div>
 
 
                       ))}
