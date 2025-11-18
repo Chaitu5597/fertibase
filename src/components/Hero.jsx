@@ -244,6 +244,7 @@ import { motion } from "framer-motion";
 import Contact from "../components/Contact";
 import About from "../components/About";
 import { div } from "framer-motion/client";
+import WordCloudSection from "./WordCloudSection";
 
 export default function Hero() {
   return (
@@ -329,6 +330,7 @@ export default function Hero() {
       {/* ✅ Next Sections */}
       <div className="relative z-30 w-full bg-white">
         <About />
+        <WordCloudSection/>
         <Contact />
       </div>
 

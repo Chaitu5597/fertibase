@@ -28,6 +28,11 @@ import mycore from '../src/assets/mycore.png';
 import photobase from '../src/assets/photobase.png'; 
 import zincore from '../src/assets/zincore.png';
 import microlife from '../src/assets/microlife.png';    
+import dfnc from '../src/assets/dfnc.png';    
+import HYDROMINLEVEL2 from '../src/assets/HYDROMINLEVEL2.png';    
+import HYDROMINLEVEL1 from '../src/assets/HYDROMINLEVEL1.png';    
+import ferti6018 from '../src/assets/ferti6018.png';    
+import liquidbase from '../src/assets/liquidbase.png';    
 
 
 export const products = [
@@ -52,7 +57,7 @@ export const products = [
   {
     id: "2",
     name: "DFNC",
-    image: "/images/dfnc.jpg",
+    image: dfnc,
     desc: "High-efficiency liquid biofertilizer (1x10⁹ CFU/ml) with free-living and endophytic nitrogen-fixing bacteria.",
     category: "Nitrogen-Fixing Biofertilizers",
     details: "Boosts nitrogen availability, improves plant growth, and enhances water use efficiency.",
@@ -66,23 +71,23 @@ export const products = [
     application: "Seed treatment and foliar spray",
     crops: "All field crops"
   },
-  {
-    id: "3",
-    name: "FERTIRHIZO",
-    image: "/images/fertirhizo.jpg",
-    desc: "Revolutionary biofertilizer (1x10⁹ CFU/ml) with free-living and endophytic nitrogen-fixing bacteria.",
-    category: "Nitrogen-Fixing Biofertilizers",
-    details: "Boosts nitrogen availability, enhances plant growth, and improves water use efficiency.",
-    benefits: [
-      "Boosts nitrogen fixation (20-40 kg/ha).",
-      "Cuts chemical fertilizer use by 25-30%.",
-      "Promotes stronger, healthier plant growth.",
-      "Improves water efficiency and yield."
-    ],
-    dosage: "1 litre per acre",
-    application: "Seed treatment and foliar spray",
-    crops: "All crops"
-  },
+  // {
+  //   id: "3",
+  //   name: "FERTIRHIZO",
+  //   image: "/images/fertirhizo.jpg",
+  //   desc: "Revolutionary biofertilizer (1x10⁹ CFU/ml) with free-living and endophytic nitrogen-fixing bacteria.",
+  //   category: "Nitrogen-Fixing Biofertilizers",
+  //   details: "Boosts nitrogen availability, enhances plant growth, and improves water use efficiency.",
+  //   benefits: [
+  //     "Boosts nitrogen fixation (20-40 kg/ha).",
+  //     "Cuts chemical fertilizer use by 25-30%.",
+  //     "Promotes stronger, healthier plant growth.",
+  //     "Improves water efficiency and yield."
+  //   ],
+  //   dosage: "1 litre per acre",
+  //   application: "Seed treatment and foliar spray",
+  //   crops: "All crops"
+  // },
   {
     id: "4",
     name: "BLOOM",
@@ -311,7 +316,7 @@ export const products = [
   {
     id: "17",
     name: "LEQUIBASE Liquid Consortia",
-    image: "/images/lequibase.jpg",
+    image: liquidbase,
     desc: "Specialized liquid consortia to enhance soil fertility and nutrient availability.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Blend of beneficial microorganisms for improved soil health.",
@@ -348,7 +353,7 @@ export const products = [
   {
     id: "19",
     name: "HVDROMIN L-1 (Vegetative)",
-    image: "/images/hvdromin-l1.jpg",
+    image: HYDROMINLEVEL1,
     desc: "Liquid fermented organic manure for vegetative growth stage.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Enhances nutrient availability and root growth.",
@@ -365,7 +370,7 @@ export const products = [
   {
     id: "20",
     name: "HVDROMIN L-2 (Flowering)",
-    image: "/images/hvdromin-l2.jpg",
+    image: HYDROMINLEVEL2,
     desc: "Liquid fermented manure for flowering and fruit setting.",
     category: "Organic Manure / Liquid Fermented Manure",
     details: "Supplies P and K for bud initiation and flower retention.",
@@ -521,7 +526,7 @@ export const products = [
   {
     id: "29",
     name: "FERTI (6:0:18)",
-    image: "/images/ferti-6018.jpg",
+    image: ferti6018,
     desc: "NK 6:0:18 Suspension fortified with Ca, Mg, Boron.",
     category: "Multi-Nutrient / NPK Biofertilizers",
     details: "Supports photosynthesis, flowering, and cell wall strength.",

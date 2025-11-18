@@ -563,6 +563,7 @@ export default function Navbar() {
     { name: "Benefits", path: "/benefits" },
     { name: "Contact", path: "/contactus" },
     { name: "Our Services", path: "/services" },
+    { name: "Career", path: "/CareerPage" },
   ];
 
   const closeMenu = () => setIsOpen(false);

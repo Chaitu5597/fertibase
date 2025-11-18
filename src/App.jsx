@@ -189,6 +189,10 @@ import Aboutus from "./components/Aboutus";
 import Contactus from "./components/contactus";
 import Services from "./components/Services";
 import Layout from "../layout";
+import CareerPage from "./components/CareerPage";
+import JobDetails from "./components/JobDetails";
+
+
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -212,6 +216,8 @@ function App() {
         <Route path="aboutus" element={<Aboutus />} />
         <Route path="contactus" element={<Contactus />} />
         <Route path="services" element={<Services />} />
+        <Route path="CareerPage" element={<CareerPage />} />
+         <Route path="/career/:id" element={<JobDetails />} />
       </Route>
 
       {/* Redirect any unmatched /fertibase/... URL to root */}
