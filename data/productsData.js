@@ -25,34 +25,57 @@ import HYDROMINLEVEL3 from '../src/assets/HYDROMINLEVEL3.png';
 import bloom from '../src/assets/bloom.png';
 import phospobase from '../src/assets/phospobase.png';
 import mycore from '../src/assets/mycore.png';
-import photobase from '../src/assets/photobase.png'; 
+import photobase from '../src/assets/photobase.png';
 import zincore from '../src/assets/zincore.png';
-import microlife from '../src/assets/microlife.png';    
-import dfnc from '../src/assets/dfnc.png';    
-import HYDROMINLEVEL2 from '../src/assets/HYDROMINLEVEL2.png';    
-import HYDROMINLEVEL1 from '../src/assets/HYDROMINLEVEL1.png';    
-import ferti6018 from '../src/assets/ferti6018.png';    
-import liquidbase from '../src/assets/liquidbase.png';    
+import microlife from '../src/assets/microlife.png';
+import dfnc from '../src/assets/dfnc.png';
+import HYDROMINLEVEL2 from '../src/assets/HYDROMINLEVEL2.png';
+import HYDROMINLEVEL1 from '../src/assets/HYDROMINLEVEL1.png';
+import ferti6018 from '../src/assets/ferti6018.png';
+import liquidbase from '../src/assets/liquidbase.png';
 
 
 export const products = [
   // ────────────────────── 1. NITROGEN-FIXING BIOFERTILIZERS ──────────────────────
   {
     id: "1",
-    name: "NITROBASE (Azospirillum)",
-    image: nitrobaseImage ,
-    desc: "Revolutionary biofertilizer with high concentration (1x10⁹ CFU/ml) of free-living nitrogen-fixing bacteria in liquid form.",
-    category: "Nitrogen-Fixing Biofertilizers",
-    details: "Converts atmospheric nitrogen (N2) into plant-usable forms, promoting healthy crop growth.",
+    name: "Fertibase Nitrobase",
+    image: nitrobaseImage,
+    desc: "Fertibase Nitrobase is a liquid biofertilizer formulated with nitrogen-fixing bacteria that convert atmospheric nitrogen into plant-usable forms.",
+    category: "Liquid Nitrogen-Fixing Biofertilizer",
+    metaTitle: "Fertibase Nitrobase is a Liquid Nitrogen-Fixing Biofertilizer for Crop Growth",
+    metaKeywords: "nitrogen-fixing biofertilizer, liquid biofertilizer, organic nitrogen supplement, Fertibase Nitrobase, nitrogen fertilizer alternative",
+    overview: "Fertibase Nitrobase is a liquid biofertilizer formulated with nitrogen-fixing bacteria that convert atmospheric nitrogen into plant-usable forms. It provides a natural and sustainable nitrogen source for crops, enhancing plant growth, improving soil fertility, and reducing the need for chemical fertilizers.",
+    whatIs: "Fertibase Nitrobase is a liquid biofertilizer containing highly efficient nitrogen-fixing bacteria that naturally convert atmospheric nitrogen into plant-usable forms. It provides a sustainable nitrogen source that enhances plant growth, reduces the need for chemical fertilizers, and supports long-term soil health. Nitrobase is ideal for farmers who want stronger roots, greener leaves, and higher yields through eco-friendly biological nutrition.",
+    howItWorks: "Beneficial bacteria in Nitrobase colonize plant roots and fix nitrogen from the air. They convert atmospheric nitrogen (N₂) into plant-available ammonia (NH₃). This continuous nitrogen supply promotes steady, balanced plant growth throughout the crop cycle.",
+    whyChoose: "Nitrobase uses advanced microbial technology to enhance soil nitrogen cycling and plant vigor. It not only increases yield but also reduces chemical nitrogen usage, helping farmers save input costs while maintaining soil balance.",
     benefits: [
-      "Boosts nitrogen fixation & improves plant growth.",
-      "Improves nutrient use efficiency and reduces chemical fertilizer usage.",
-      "Promotes stronger, healthier plant growth.",
-      "Improves plants’ negative growth."
+      { title: "Enhanced Nitrogen Fixation", desc: "Fixes atmospheric nitrogen into ammonium form readily absorbed by roots." },
+      { title: "Reduced Fertilizer Costs", desc: "Can reduce synthetic nitrogen fertilizer use by 25–30%." },
+      { title: "Improved Plant Growth", desc: "Stimulates natural growth hormones for stronger stems and greener leaves." },
+      { title: "Better Water Efficiency", desc: "Increases plants’ ability to absorb and retain moisture, improving yield under rain-fed conditions." },
+      { title: "Healthy Soil", desc: "Boosts beneficial microbial activity and improves soil structure." }
     ],
-    dosage: "1 liter per acre",
-    application: "Foliar spray and Drip irrigation",
-    crops: "Paddy"
+    dosage: [
+      { method: "Seed Treatment", dosage: "250 ml per 10 kg of seed", timing: "Before sowing", details: "Mix evenly and shade-dry before planting." },
+      { method: "Foliar Spray", dosage: "1 liter per acre", timing: "Vegetative stage", details: "Mix 2–3 ml per liter of water." },
+      { method: "Drip Irrigation", dosage: "1 liter per acre", timing: "Early growth stage", details: "Apply through irrigation system." }
+    ],
+    crops: ["Paddy", "Maize", "Cotton", "Sugarcane", "Pulses", "Vegetables", "Banana", "All Field & Horticultural Crops"],
+    techInfo: [
+      { key: "Type", value: "Liquid Biofertilizer" },
+      { key: "Microbial Count", value: "≥ 1 × 10⁸ CFU/ml" },
+      { key: "Active Organisms", value: "Nitrogen-Fixing Bacteria" },
+      { key: "Shelf Life", value: "12 months from the date of manufacture" }
+    ],
+    packSizes: ["1 L", "5 L", "20 L"],
+    faqs: [
+      { question: "What is Fertibase Nitrobase?", answer: "Fertibase Nitrobase is a liquid biofertilizer containing nitrogen-fixing bacteria that convert atmospheric nitrogen into forms plants can use, promoting sustainable crop growth." },
+      { question: "How does Nitrobase reduce fertilizer costs?", answer: "By naturally fixing nitrogen from the air, Nitrobase minimizes the need for synthetic urea or DAP, helping farmers save up to 25–30% on chemical fertilizers." },
+      { question: "Is Nitrobase safe for all crops?", answer: "Yes, Nitrobase is suitable for all field and horticultural crops, including paddy, cotton, banana, sugarcane, and vegetables." },
+      { question: "Can Nitrobase be mixed with other fertilizers?", answer: "It is compatible with most biofertilizers and organic inputs, but should not be mixed with chemical bactericides or fungicides." },
+      { question: "When should Nitrobase be applied?", answer: "Apply Nitrobase at the early vegetative stage for maximum benefit. For longer crops like sugarcane or banana, repeat application every 30–45 days." }
+    ]
   },
   {
     id: "2",
@@ -627,4 +650,4 @@ export const products = [
     crops: "All crops"
   }
 ];
-  
+

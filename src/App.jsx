@@ -217,7 +217,7 @@ function App() {
         <Route path="contactus" element={<Contactus />} />
         <Route path="services" element={<Services />} />
         <Route path="CareerPage" element={<CareerPage />} />
-         <Route path="/career/:id" element={<JobDetails />} />
+        <Route path="/career/:id" element={<JobDetails />} />
       </Route>
 
       {/* Redirect any unmatched /fertibase/... URL to root */}
