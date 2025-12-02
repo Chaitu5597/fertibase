@@ -34,16 +34,17 @@ export default function Hero() {
           transition={{ duration: 1 }}
         >
           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">
-            Nurture the Soil,  
+            FertiBase 
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-300">
-              Grow the Future
+              The Foundation of Fertile Fields
             </span>
           </h1>
 
           <p className="text-lg md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Experience the power of nature with our eco-friendly biofertilizers.  
-            Healthier soil, stronger roots, and sustainable harvests — all naturally.
+            "Bringing life back to the soil, one microbe at a time.
+            <br />
+            Because strong fields grow from a stronger foundation."
           </p>
 
           {/* ✅ Buttons */}

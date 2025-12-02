@@ -40,7 +40,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-semibold">Phone</h4>
-                <p>+91 9133 737 737</p>
+                <p>8185966666</p>
               </div>
             </li>
             <li className="flex items-center gap-4">
@@ -49,7 +49,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-semibold">Email</h4>
-                <p>admin@fertibase.in</p>
+                <p>Info@fertibase.in</p>
               </div>
             </li>
             <li className="flex items-center gap-4">
@@ -58,7 +58,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-semibold">Head Office</h4>
-                <p>Hyderabad, India</p>
+                <p>Sy No. 81, Sultanpur, Hyderabad, India</p>
               </div>
             </li>
             <li className="flex items-center gap-4">
@@ -67,7 +67,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="font-semibold">Working Hours</h4>
-                <p>Mon – Sat, 8:00 AM – 6:00 PM</p>
+                <p>Mon – Sat, 9:00 AM – 6:00 PM</p>
               </div>
             </li>
           </ul>

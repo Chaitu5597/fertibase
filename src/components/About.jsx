@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const features = [
-    "100% Organic & Eco-Friendly",
-    "Enhances Soil Fertility Long-Term",
-    "Suitable for All Crops & Climates",
-    "Certified by Ministry of Agriculture",
+    "Science-driven microbial formulations that enhance soil health naturally",
+    "Proven products that boost nutrient availability and improve crop performance",
+    "Sustainable, residue-free solutions that support long-term soil fertility",
+    "Farmer-focused innovations designed for all AGRO-CLIMATIC conditions",
   ];
 
   return (
@@ -48,13 +48,13 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
           </div>
 
-          <div className="absolute -bottom-6 -left-6 bg-white shadow-lg rounded-2xl px-6 py-4 flex items-center gap-3">
+          {/* <div className="absolute -bottom-6 -left-6 bg-white shadow-lg rounded-2xl px-6 py-4 flex items-center gap-3">
             <Leaf className="h-8 w-8 text-green-500" />
             <div>
               <p className="text-sm text-gray-500">Serving Farmers for</p>
               <p className="text-xl font-bold text-green-700">15+ Years</p>
             </div>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Right: Content */}
@@ -67,16 +67,14 @@ export default function About() {
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
             Why Choose{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-lime-500">
-              Fertile base 
+              Fertibase?
             </span>
           </h2>
 
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            For over <span className="font-semibold text-green-700">15 years</span>, Ferti has
-            empowered farmers across India to grow stronger crops and healthier
-            yields — the natural way. Our 100% organic fertilizers improve soil
-            vitality and boost productivity by up to{" "}
-            <span className="font-bold text-green-600">35% sustainably</span>.
+            Fertibase provides biofertilizers that boost soil health and strengthen crop growth.
+            Our innovative solutions are designed to bring life back to the soil, one microbe at a time,
+            ensuring strong fields grow from a stronger foundation.
           </p>
 
           <ul className="space-y-5">

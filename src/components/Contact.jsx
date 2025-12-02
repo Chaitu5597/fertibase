@@ -29,14 +29,14 @@ export default function Contact() {
               <div className="p-3 rounded-full bg-indigo-100 text-indigo-600">
                 <Phone className="h-6 w-6" />
               </div>
-              <span className="text-gray-700 text-lg font-medium">+91 98765 43210</span>
+              <span className="text-gray-700 text-lg font-medium">8185966666</span>
             </div>
 
             <div className="flex items-center space-x-4">
               <div className="p-3 rounded-full bg-green-100 text-green-600">
                 <Mail className="h-6 w-6" />
               </div>
-              <span className="text-gray-700 text-lg font-medium">info@ferti.in</span>
+              <span className="text-gray-700 text-lg font-medium">Info@fertibase.in</span>
             </div>
 
             <div className="flex items-start space-x-4">
@@ -44,16 +44,16 @@ export default function Contact() {
                 <MapPin className="h-6 w-6" />
               </div>
               <span className="text-gray-700 text-lg font-medium">
-                123 Green Fields, Agriculture Zone,
+                SY NO. 81, Sultanpur
                 <br />
-                Punjab, India
+                Hyderabad, India
               </span>
             </div>
           </div>
 
           <div className="mt-10 border-t border-gray-200 pt-6">
             <p className="text-gray-500 text-sm">
-              We’re available Mon–Sat from 9am to 7pm.
+              We’re available Mon–Sat from 9am to 6pm.
             </p>
           </div>
         </div>

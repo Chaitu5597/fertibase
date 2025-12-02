@@ -4,14 +4,31 @@ import { Leaf, Users, Map, Globe, Mail, Phone, Clock, Award, Target, Lightbulb, 
 export default function Aboutus() {
   return (
     <div className="bg-white text-gray-800">
-      {/* HERO SECTION - Redesigned with cleaner layout */}
+      {/* HERO SECTION - Redesigned with video background */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-900 via-green-800 to-emerald-700">
-        {/* Animated background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}></div>
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: 'brightness(0.6)' }}
+          >
+            <source src="https://cdn.pixabay.com/video/2022/11/07/137866-768947728_large.mp4" type="video/mp4" />
+            {/* Fallback to animated background pattern if video fails */}
+          </video>
+          {/* Fallback animated background pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}></div>
+          </div>
         </div>
+
+        {/* Enhanced Overlay for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-20 text-center z-10">
           <motion.div
@@ -180,7 +197,7 @@ export default function Aboutus() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Map className="w-12 h-12" />, num: "2", label: "States", desc: "Operating across multiple regions" },
+              { icon: <Map className="w-12 h-12" />, num: "98", label: "Districts", desc: "Operating across multiple States" },
               { icon: <Users className="w-12 h-12" />, num: "100+", label: "Dealers", desc: "Strong distribution network" },
               { icon: <Globe className="w-12 h-12" />, num: "1L+", label: "Acres", desc: "Farmland transformed" }
             ].map((stat, i) => (
@@ -305,8 +322,12 @@ export default function Aboutus() {
         </div>
       </section>
 
-      {/* LEADERSHIP */}
-      <section className="py-20 bg-gradient-to-b from-green-50 to-emerald-50">
+      {/* LEADERSHIP - Redesigned Modern UI */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-100 to-lime-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-green-100 to-emerald-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -315,81 +336,100 @@ export default function Aboutus() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-emerald-600">Leadership</span>
+            <div className="inline-block mb-4">
+              <span className="bg-gradient-to-r from-emerald-600 to-lime-600 text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
+                Leadership Team
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6">
+              Meet Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-lime-600">Leaders</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Guided by experienced leaders committed to agricultural excellence
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Visionary leaders driving agricultural innovation and empowering farmers across the nation
             </p>
+            <div className="w-32 h-1.5 bg-gradient-to-r from-emerald-500 to-lime-500 mx-auto mt-6 rounded-full"></div>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {[
-              { name: "Dr. L. N. Reddy", title: "Founding Director & CEO", image: "/profiles/dr_reddy.jpg" },
-              { name: "Krishnamurali Chowdary", title: "Director - Sales", image: "/profiles/krishnamurali.jpg" },
-              { name: "E Satyanarayana Reddy", title: "Chief Business Officer (South India)", image: "/profiles/satyanarayana.jpg" }
+              {
+                name: "Krishnamurali Chowdary",
+                title: "CEO",
+                image: "/profiles/krishnamurali.jpg",
+                bio: "Leading sales strategy and market expansion with expertise in agricultural distribution"
+              },
+              {
+                name: "E Satyanarayana Reddy",
+                title: "Director - Sales (South India)",
+                image: "/profiles/satyanarayana.jpg",
+                bio: "Driving business growth and farmer partnerships across South India"
+              }
             ].map((person, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-center group"
+                className="group relative"
               >
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-emerald-200 group-hover:border-emerald-400 transition-all">
-                  <img
-                    src={person.image}
-                    alt={person.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.parentElement.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-emerald-500 to-lime-500 flex items-center justify-center text-white text-3xl font-bold">${person.name.charAt(0)}</div>`;
-                    }}
-                  />
+                <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-emerald-200">
+                  {/* Gradient accent bar */}
+                  <div className="h-2 bg-gradient-to-r from-emerald-500 via-lime-500 to-green-500"></div>
+
+                  <div className="p-8">
+                    <div className="flex items-center gap-6 mb-6">
+                      {/* Profile Image */}
+                      <div className="relative flex-shrink-0">
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-lime-400 rounded-2xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div className="relative w-28 h-28 rounded-2xl overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                          <img
+                            src={person.image}
+                            alt={person.name}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.target.style.display = 'none';
+                              e.target.parentElement.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-emerald-500 to-lime-500 flex items-center justify-center text-white text-4xl font-bold">${person.name.charAt(0)}</div>`;
+                            }}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Name and Title */}
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                          {person.name}
+                        </h3>
+                        <p className="text-emerald-600 font-semibold text-lg mb-1">
+                          {person.title}
+                        </p>
+                        <div className="w-16 h-1 bg-gradient-to-r from-emerald-500 to-lime-500 rounded-full"></div>
+                      </div>
+                    </div>
+
+                    {/* Bio */}
+                    <p className="text-gray-600 leading-relaxed text-base">
+                      {person.bio}
+                    </p>
+
+                    {/* Decorative element */}
+                    <div className="mt-6 flex items-center gap-2">
+                      <div className="flex-1 h-px bg-gradient-to-r from-emerald-200 to-transparent"></div>
+                      <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-lime-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{person.name}</h3>
-                <p className="text-emerald-600 font-medium">{person.title}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-     
 
-      {/* CONTACT CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-emerald-600 to-green-600 rounded-3xl p-12 text-center text-white shadow-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Farming?</h2>
-              <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
-                Join thousands of farmers who trust Fertibase for sustainable and profitable agriculture
-              </p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-lg rounded-full px-6 py-3">
-                  <Phone className="w-5 h-5" />
-                  <span className="font-semibold">+91 9133 737 737</span>
-                </div>
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-lg rounded-full px-6 py-3">
-                  <Mail className="w-5 h-5" />
-                  <span className="font-semibold">Admin@fertibase.in</span>
-                </div>
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-lg rounded-full px-6 py-3">
-                  <Clock className="w-5 h-5" />
-                  <span className="font-semibold">8:00 AM - 6:00 PM</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+
+     
     </div>
   );
 }
