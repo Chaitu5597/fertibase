@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { Sprout, Leaf, FlaskConical, Droplets, Network, Sun } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   const services = [
@@ -26,12 +28,12 @@ export default function Services() {
     {
       icon: <Network className="w-10 h-10 text-teal-500" />,
       title: "Farmer Empowerment",
-      desc: "We train and support farmers with modern techniques, AI, and IoT-driven farming insights.",
+      desc: "We train and support farmers through multiple platforms such as field trials, on-ground demonstrations, and farmer meetings led by our expert agronomists.",
     },
     {
       icon: <Sun className="w-10 h-10 text-yellow-500" />,
       title: "Sustainable Farming",
-      desc: "FertiBase promotes a greener planet by advocating renewable resources and circular agriculture.",
+      desc: "At Fertibase, we promote sustainable farming by improving soil health, reducing input costs, and increasing crop productivity through science-backed solutions.",
     },
   ];
 
@@ -45,8 +47,8 @@ export default function Services() {
           className="text-5xl md:text-6xl font-bold text-emerald-700 mb-6"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold text-emerald-700">
-          Our <span className="text-green-500">Services</span>
-        </h1>
+            Our <span className="text-green-500">Solutions</span>
+          </h1>
         </motion.h1>
 
         <motion.p
@@ -84,13 +86,15 @@ export default function Services() {
           className="mt-24 bg-gradient-to-r from-green-600 to-emerald-500 text-white py-16 px-8 rounded-3xl shadow-lg relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-30"></div>
-          <h2 className="text-4xl font-bold mb-4">Partner With FertiBase</h2>
-          <p className="text-lg max-w-2xl mx-auto mb-8">
-            Join us in redefining agriculture with innovation and sustainability. Together, we can grow a greener future.
-          </p>
-          <button className="bg-white text-green-700 font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-green-100 transition-all duration-300">
-            Get In Touch
-          </button>
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold mb-4">Partner With FertiBase</h2>
+            <p className="text-lg max-w-2xl mx-auto mb-8">
+              Join us in redefining agriculture with innovation and sustainability. Together, we can grow a greener future.
+            </p>
+            <Link to="/contactus" className="inline-block bg-white text-green-700 font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-green-100 transition-all duration-300">
+              Get In Touch
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -23,7 +23,14 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', {
+        varsIgnorePattern: '^[A-Z_]',
+        // Ignore React and common JSX-used imports
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
+      }],
+      // Allow unused imports that are used in JSX
+      'react/jsx-uses-vars': 'off',
     },
   },
 ])

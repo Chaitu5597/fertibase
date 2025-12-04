@@ -1,5 +1,5 @@
 
-import cloud from '../assets/cloud.png';
+import cloud from '../assets/wordcloud.jpeg';
 import { SectionWrapper } from './SectionWrapper';
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ export default function WordCloudSection() {
           <img
             src={cloud}
             alt="Product Cloud"
-            className="w-full h-auto object-contain scale-110 md:scale-100 animate-floating"
+            className="w-full h-auto object-contain rounded-lg scale-110 md:scale-100 animate-floating"
           />
         </div>
 

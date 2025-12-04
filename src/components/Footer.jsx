@@ -1,7 +1,10 @@
 
+
 import { Youtube, Instagram, Mail, Facebook, Linkedin, Phone, MapPin } from "lucide-react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import LogoImage from "../assets/logo.jpg"; // <-- your logo image
+import { Link } from "react-router-dom";
+import { LOGOS } from "../config/images";
 
 export default function Footer() {
   const socialLinks = [
@@ -20,7 +23,7 @@ export default function Footer() {
           {/* Brand Section with Image */}
           <div>
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center mb-4">
-              <img src={LogoImage} alt="Fertibase Logo" className="w-2xl h-36 mr-44 object-contain" />
+              <img src={LOGOS.main} alt="Fertibase Logo" className="w-2xl h-36 mr-44 object-contain" />
 
             </motion.div>
             <p className="text-gray-600 leading-relaxed">
@@ -45,49 +48,54 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Products */}
+          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4 border-l-4 border-emerald-400 pl-3 text-emerald-700">
-              Products
+              Quick Links
             </h4>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <a href="#products" className="hover:text-emerald-700 transition">
-                  Our Products
-                </a>
+                <Link to="/" className="hover:text-emerald-700 transition">
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="#benefits" className="hover:text-emerald-700 transition">
-                  Benefits
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-emerald-700 transition">
+                <Link to="/aboutus" className="hover:text-emerald-700 transition">
                   About Us
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/products" className="hover:text-emerald-700 transition">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="hover:text-emerald-700 transition">
+                  Careers
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Company */}
           <div>
             <h4 className="text-lg font-semibold mb-4 border-l-4 border-emerald-400 pl-3 text-emerald-700">
-              Resources
+              Company
             </h4>
             <ul className="space-y-2 text-gray-700">
               <li>
-                <a href="#" className="hover:text-emerald-700 transition">
-                  Blog
+                <Link to="/contactus" className="hover:text-emerald-700 transition">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <a href="#home" className="hover:text-emerald-700 transition">
+                  Our Mission
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-emerald-700 transition">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-emerald-700 transition">
-                  Support
+                <a href="#home" className="hover:text-emerald-700 transition">
+                  Our Vision
                 </a>
               </li>
             </ul>
@@ -124,7 +132,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 pt-6 text-center text-gray-600 text-sm">
           <p>
             © {new Date().getFullYear()} <span className="font-semibold text-emerald-700">Fertibase</span>.
-            All rights reserved. | Designed with 🌱 for a greener tomorrow.
+            All rights reserved.
           </p>
         </div>
       </div>

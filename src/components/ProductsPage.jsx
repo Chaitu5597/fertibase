@@ -88,10 +88,10 @@ export default function ProductsPage() {
         {/* Back Button */}
         <div className="mb-6">
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/")}
             className="text-emerald-800 font-semibold my-16 ml-2 hover:text-emerald-950 mb-4"
           >
-            ← Back to Products
+            ← Back to Home
           </button>
         </div>
 

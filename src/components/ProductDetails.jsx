@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -79,6 +80,13 @@ export default function ProductDetails() {
       {/* Hero Section - Light & Fresh */}
       <div className="relative bg-gradient-to-br from-green-50 via-white to-emerald-50 overflow-hidden">
 
+        {/* Back Button - Below Header, Top Left */}
+        <div className="absolute top-6 left-6 z-40 mt-12 ml-5">
+          <Link to="/products" className="inline-flex items-center text-emerald-700 font-semibold hover:text-emerald-900 transition-allhover:shadow-xl hover:scale-105">
+            <ArrowLeft size={18} className="mr-2" /> Back to Products
+          </Link>
+        </div>
+
         {/* Decorative blobs */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
@@ -92,12 +100,6 @@ export default function ProductDetails() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Back Button */}
-            <div className="mb-4">
-              <Link to="/products" className="inline-flex items-center text-emerald-700 font-semibold hover:text-emerald-900 transition-colors bg-white px-4 py-2 rounded-full shadow-sm border border-emerald-100">
-                <ArrowLeft size={18} className="mr-2" /> Back to Products
-              </Link>
-            </div>
 
             <div>
               <div className="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-sm font-bold tracking-wide mb-4">
@@ -138,7 +140,7 @@ export default function ProductDetails() {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-contain drop-shadow-xl transform transition-transform duration-500 group-hover:scale-105 relative z-10"
-                  
+
                 />
               ) : (
                 <ImageIcon size={80} className="text-gray-300" />

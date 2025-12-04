@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import logoSrc from "../assets/b.png";
+import { LOGOS } from "../config/images";
 
 const LETTER_DELAY = 0.08;
 const BOX_DURATION = 0.15;
@@ -44,12 +44,12 @@ const FertibaseSplash = ({ onComplete, className = "" }) => {
       initial={{ opacity: 1 }}
       animate={{ opacity: isFinished ? 0 : 1 }}
       transition={{ duration: SPLASH_FADE_OUT, ease: "easeOut" }}
-      style={{ pointerEvents: isFinished ? "none" : "auto" , backgroundColor: '#f7f7f7' }} // Amber-50
+      style={{ pointerEvents: isFinished ? "none" : "auto", backgroundColor: '#f7f7f7' }} // Amber-50
     >
       <div className="relative flex items-center space-x-6 px-6 overflow-hidden">
         {/* === LOGO WITH ANIMATION === */}
         <motion.img
-          src={logoSrc}
+          src={LOGOS.splash}
           alt="Fertibase Logo"
           className="w-28 h-28 md:w-36 md:h-36 object-contain z-10"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -63,7 +63,7 @@ const FertibaseSplash = ({ onComplete, className = "" }) => {
 
         {/* === TEXT WITH SHINE OVERLAY === */}
         <div className="relative text-center">
-          <Typewriter text="FERTI" color="text-green-600"  />
+          <Typewriter text="FERTI" color="text-green-600" />
           <div className="h-0.5" />
           <Typewriter
             text="BASE"

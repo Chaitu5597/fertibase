@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
 
 import { Leaf, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { HERO_IMAGES } from "../config/images";
 
 export default function About() {
   const features = [
-    "Science-driven microbial formulations that enhance soil health naturally",
+    "Scientifically driven microbial formulations that enhance soil health naturally",
     "Proven products that boost nutrient availability and improve crop performance",
     "Sustainable, residue-free solutions that support long-term soil fertility",
     "Farmer-focused innovations designed for all AGRO-CLIMATIC conditions",
@@ -41,7 +43,7 @@ export default function About() {
         >
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1606741965326-7ab8e1b1f2a4?auto=format&fit=crop&w=800&q=80"
+              src={HERO_IMAGES.about}
               alt="Organic Farming"
               className="w-full h-96 object-cover transform hover:scale-105 transition duration-700"
             />
@@ -95,7 +97,7 @@ export default function About() {
 
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="#contact"
+            href="#aboutus"
             className="inline-block mt-10 px-8 py-4 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition"
           >
             Learn More About Us

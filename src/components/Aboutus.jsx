@@ -249,7 +249,7 @@ export default function Aboutus() {
               {
                 icon: "🌿",
                 title: "Farmer-First Approach",
-                desc: "Prioritizing farmers' needs with direct support and field training"
+                desc: "Prioritizing farmers needs with direct support and field training"
               },
               {
                 icon: "✅",
@@ -314,7 +314,7 @@ export default function Aboutus() {
                 <Lightbulb className="w-16 h-16 text-lime-600 mb-6" />
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  To strengthen farmers' productivity and profitability by providing effective agricultural solutions that enhance crop health and ensure sustainable farming.
+                  To strengthen farmers productivity and profitability by providing effective agricultural solutions that enhance crop health and ensure sustainable farming.
                 </p>
               </div>
             </motion.div>
