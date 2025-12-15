@@ -11,6 +11,7 @@ import Services from "./components/Services";
 import Layout from "../layout";
 import CareerPage from "./components/CareerPage";
 import JobDetails from "./components/JobDetails";
+import TestimonialSlider from "./components/TestimonialSlider";
 
 
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="solutions" element={<Services />} />
         <Route path="CareerPage" element={<CareerPage />} />
         <Route path="/Careers/:id" element={<JobDetails />} />
+        <Route path="test" element={<TestimonialSlider/>}/>
       </Route>
 
       {/* Redirect any unmatched /fertibase/... URL to root */}

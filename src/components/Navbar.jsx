@@ -12,8 +12,8 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/aboutus" },
-    // { name: "Products", path: "/products" },
-    { name: "Products", path: "https://iicihq-ac.myshopify.com/collections/all" },
+    { name: "Products", path: "/products" },
+    // { name: "Products", path: "https://iicihq-ac.myshopify.com/collections/all" },
     // { name: "Benefits", path: "/benefits" },
     { name: "Contact", path: "/contactus" },
     { name: "Our Solutions", path: "/solutions" },

@@ -1,10 +1,11 @@
 
 import { ChevronRight, Leaf, Sprout } from "lucide-react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import Contact from "../components/Contact";
 import About from "../components/About";
-import { div } from "framer-motion/client";
 import WordCloudSection from "./WordCloudSection";
+import TestimonialSlider from "./TestimonialSlider";
 
 export default function Hero() {
   return (
@@ -93,6 +94,7 @@ export default function Hero() {
         <About />
         <WordCloudSection/>
         <Contact />
+        <TestimonialSlider/>
       </div>
 
         </div>
