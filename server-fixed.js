@@ -10,6 +10,7 @@ app.use(express.json({ limit: "10mb" }));
 
 app.use("/api/products", require("./routes/products.js"));
 app.use("/api/careers", require("./routes/careers.js"));
+app.use("/api/testimonials", require("./routes/testimonials.js"));
 
 app.get("/", (req, res) => {
     res.send("<h1>FertiBase Backend Running Securely</h1>");
